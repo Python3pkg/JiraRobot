@@ -20,7 +20,7 @@ from os.path import join, dirname
 
 sys.path.append(join(dirname(__file__), 'JiraRobot'))
 
-execfile(join(dirname(__file__), 'JiraRobot', 'version.py'))
+exec(compile(open(join(dirname(__file__), 'JiraRobot', 'version.py')).read(), join(dirname(__file__), 'JiraRobot', 'version.py'), 'exec'))
 
 DESCRIPTION = """
 JiraRobot is a robot library for interacting with
